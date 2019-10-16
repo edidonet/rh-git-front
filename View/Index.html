@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>RH - GitHub</title>
+    </head>
+    <body>
+        <h1>RH - GitHub</h1> 
+        <form action="https://localhost:44342/api/UsersGit/" method="post">
+            <p>
+                <label>Pesquisa: </label>
+                <input type="text" size="100" name="TextoPesquisa" />                               
+            </p>
+            <p>
+                <label>Período</label>
+                <input type="date" value="2019-01-01" name="DataInicio" />
+                <label> à </label>
+                <input type="date" value="2019-12-31" name="DataFim" />
+            </p>
+            <p>
+                <label>Cidade: </label>
+                <input type="text" size="100" name="Cidade" />
+            </p>
+            <p>
+                <label>Linguagem: </label>
+                <select name="Linguagem">
+                    <option value="0">Todas</option>
+                    <option value="1">CSharp</option>
+                    <option value="2">Java</option>
+                    <option value="3">Go</option>
+                </select>
+            </p>
+            <p>
+                <label>Tipo Pesquisa: </label>
+                <input type="radio" name="TipoConta" value="U" checked/>Usuário
+                <input type="radio" name="TipoConta" value="E" />Empresa
+            </p>
+            <p>
+                <label>Buscar Por: </label>
+                <input type="radio" name="TipoPesquisa" value="N" />Nome
+                <input type="radio" name="TipoPesquisa" value="E" />Email
+                <input type="radio" name="TipoPesquisa" value="L" />Login
+				<input type="radio" name="TipoPesquisa" value="T" checked/>Todos
+            </p>
+            <p>
+                <label>Ordernar Por</label>
+                <select name="OrdenarPor">
+                    <option value="S">Seguidores</option>
+                    <option value="R">Respositórios</option>
+                    <option value="A">Ambas</option="OrdenarPor">
+                </select>
+
+                <label>Ordenação</label>
+                <select name="TipoOrdenacao">
+                    <option value="A">Ascendente</option>
+                    <option value="D">Decrescente</option>
+                </select>
+            </p>
+            <p>
+                <label>Resultado Por Página</label>
+                <select name="ResultadosPorPagina">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                </select>
+            </p>
+            <p>
+                <button type="submit">Buscar</button>
+            </p>
+        </form>
+    </body>
+</html>
